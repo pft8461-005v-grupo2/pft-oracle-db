@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE SP_PRODUCTO (
+create or replace PROCEDURE SP_CREAR_PRODUCTO (
   
   
   IN_DESCRIPCION		IN VARCHAR2,
@@ -10,7 +10,7 @@ CREATE OR REPLACE PROCEDURE SP_PRODUCTO (
 
 BEGIN
 
-    OUT_GLOSA := 'SP_CREAR_USUARIO ejecutado exitosamente';
+    OUT_GLOSA := 'SP_CREAR_PRODUCTO ejecutado exitosamente';
     OUT_ESTADO := 0;
  
    INSERT INTO feria2.producto(
@@ -20,7 +20,7 @@ BEGIN
       
    )
     VALUES (
-      -- feria2.USUARIO_SEQUENCE.NEXTVAL,
+      
        IN_DESCRIPCION,
        1
     )
@@ -30,4 +30,4 @@ BEGIN
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
             OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
-END SP_PRODUCTO; 
+END SP_CREAR_PRODUCTO;
