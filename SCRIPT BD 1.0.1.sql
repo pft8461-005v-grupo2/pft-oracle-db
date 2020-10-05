@@ -8,10 +8,10 @@ DROP TABLE SUBASTA cascade constraints;
 DROP TABLE INGRESO cascade constraints;
 DROP TABLE PROCESO_VENTA cascade constraints;
 DROP TABLE SOLICITUD_COMPRA cascade constraints;
-DROP TABLE CLIENTE cascade constraints
-DROP TABLE DETALLE_SOLICITUD cascade constraints
-DROP TABLE PRODUCTO cascade constraints
-DROP TABLE INGRESO cascade constraints
+DROP TABLE CLIENTE cascade constraints;
+DROP TABLE DETALLE_SOLICITUD cascade constraints;
+DROP TABLE PRODUCTO cascade constraints;
+DROP TABLE INGRESO cascade constraints;
 
 
 
