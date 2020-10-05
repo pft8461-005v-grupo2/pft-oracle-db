@@ -1,3 +1,20 @@
+DROP TABLE ROL cascade constraints;
+DROP TABLE USUARIO cascade constraints;
+DROP TABLE CONTRATO cascade constraints;
+DROP TABLE PRODUCTOR cascade constraints;
+DROP TABLE TRANSPORTISTA cascade constraints;
+DROP TABLE DETALLE_SUBASTA cascade constraints;
+DROP TABLE SUBASTA cascade constraints;
+DROP TABLE INGRESO cascade constraints;
+DROP TABLE PROCESO_VENTA cascade constraints;
+DROP TABLE SOLICITUD_COMPRA cascade constraints;
+DROP TABLE CLIENTE cascade constraints
+DROP TABLE DETALLE_SOLICITUD cascade constraints
+DROP TABLE PRODUCTO cascade constraints
+DROP TABLE INGRESO cascade constraints
+
+
+
 -- Generado por Oracle SQL Developer Data Modeler 20.2.0.167.1538
 --   en:        2020-10-05 20:12:09 CLST
 --   sitio:      Oracle Database 11g
