@@ -40,6 +40,7 @@ CREATE TABLE cliente (
 );
 
 ALTER TABLE cliente ADD CONSTRAINT cliente_pk PRIMARY KEY ( id );
+ALTER TABLE cliente ADD CONSTRAINT unique_correo_usuario UNIQUE(correo);
 
 CREATE TABLE contrato (
     id             INTEGER NOT NULL,
@@ -127,6 +128,8 @@ CREATE UNIQUE INDEX productor__idx ON
     ASC );
 
 ALTER TABLE productor ADD CONSTRAINT productor_pk PRIMARY KEY ( id );
+ALTER TABLE productor ADD CONSTRAINT unique_correo_productor UNIQUE(correo);
+
 
 CREATE TABLE rol (
     id           INTEGER NOT NULL,
@@ -180,7 +183,7 @@ CREATE TABLE usuario (
     id          INTEGER NOT NULL,
     rol_id      INTEGER NOT NULL,
     correo      VARCHAR2(150) NOT NULL,
-    contrasena  VARCHAR2(30) NOT NULL,
+    contrasena  VARCHAR2(60) NOT NULL,
     habilitado  CHAR(1) NOT NULL
 );
 
