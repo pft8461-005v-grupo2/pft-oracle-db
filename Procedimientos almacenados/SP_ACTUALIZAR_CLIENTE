@@ -1,0 +1,47 @@
+create or replace PROCEDURE SP_ACTUALIZAR_CLIENTE(
+IN_ID_CLIENTE IN NUMBER,
+IN_IDENTIFICADOR IN VARCHAR2,
+IN_RAZON_SOCIAL IN VARCHAR2,
+IN_DIRECCION IN VARCHAR2,
+IN_CIUDAD in VARCHAR2,
+IN_PAIS_ORIGEN IN VARCHAR2,
+IN_TIPO_CLIENTE IN NUMBER,
+IN_CORREO IN VARCHAR2,
+IN_HABILTADO IN NUMBER,
+OUT_GLOSA 		OUT VARCHAR2,
+OUT_ESTADO 		OUT NUMBER,
+OUT_ID_SALIDA 	OUT NUMBER
+) AS 
+BEGIN
+
+OUT_GLOSA := 'SP_ACTUALIZAR_CLIENTE ejecutado exitosamente';
+    OUT_ESTADO := 0;
+
+    UPDATE FERIA2.CLIENTE
+    SET  
+   cliente.identificador=IN_IDENTIFICADOR,
+   cliente.razonsocial=IN_RAZON_SOCIAL,
+   cliente.direccion=IN_DIRECCION,
+   cliente.ciudad=IN_CIUDAD,
+   cliente.pais_origen=IN_PAIS_ORIGEN,
+   cliente.tipo_cliente=IN_TIPO_CLIENTE,
+   cliente.CORREO=IN_CORREO,
+   cliente.habilitado=IN_HABILTADO
+    WHERE ID=IN_ID_CLIENTE ;
+
+
+    MERGE INTO usuario usu
+    USING ( SELECT * from CLIENTE) CLI
+    ON (usu.id=CLI.usuario_id)
+    WHEN MATCHED THEN
+    UPDATE SET
+      usu.correo=CLI.correo;
+
+
+    EXCEPTION
+        WHEN OTHERS THEN
+            OUT_ESTADO := -1;
+            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+
+  NULL;
+END SP_ACTUALIZAR_CLIENTE;
