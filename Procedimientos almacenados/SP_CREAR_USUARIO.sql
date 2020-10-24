@@ -13,20 +13,20 @@ BEGIN
 
     OUT_GLOSA := 'SP_CREAR_USUARIO ejecutado exitosamente';
     OUT_ESTADO := 0;
- 
+
    INSERT INTO feria2.usuario(
-     -- ID,
+      ID,
       CONTRASENA,
       HABILITADO,
       correo,
-      rol_id,
+      rol_id
    )
     VALUES (
-      -- feria2.USUARIO_SEQUENCE.NEXTVAL,
+       USUARIO_SEQUENCE.NEXTVAL,
        IN_CONTRASENA,
        1,
        IN_CORREO,
-       IN_ROL_ID,
+       IN_ROL_ID
     )
     RETURNING ID INTO OUT_ID_SALIDA;
 
