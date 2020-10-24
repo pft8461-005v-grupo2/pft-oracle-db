@@ -14,6 +14,7 @@ OUT_ID_SALIDA 	OUT NUMBER
 BEGIN
 
 INSERT INTO FERIA2.proceso_venta (
+ID,
 ingreso_id,
 solicitud_compra_id, 
 subasta_id, 
@@ -23,6 +24,7 @@ clienteaceptaacuerdo,
 precioventatotal, 
 preciocostototal)
 VALUES (
+PROCESO_VENTA_SEQUENCE.NEXTVAL,
 IN_INGRESO_ID,
 IN_SOLICITUD_COMPRA_ID,
 IN_SUBASTA_ID,
