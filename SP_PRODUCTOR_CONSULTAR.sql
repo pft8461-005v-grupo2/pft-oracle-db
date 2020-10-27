@@ -20,23 +20,18 @@ BEGIN
 
 	-- Validador de valores obligatorios
 
-    IF in_id    IS NULL THEN
-        RAISE NO_DATA_FOUND;
-    END IF;
 
     OPEN out_registros FOR
 
-    SELECT * FROM TABLA
-
-    select  id,
-    		usuario_id ,
-    		contrato_id,
-    		rut,
-    		razonsocial,
-    		direccion ,
-    		comuna,
-    		correo,
-    		habilitado 
+    select  in_id,
+    		in_usuario_id ,
+    		in_contrato_id,
+    		in_rut,
+    		in_razonsocial,
+    		in_direccion ,
+    		in_comuna,
+    		in_correo,
+    		in_habilitado
     FROM productor
     where 	
     		-- Opcionales
