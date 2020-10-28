@@ -7,7 +7,7 @@ create or replace PROCEDURE SP_INGRESO_CONSULTAR
     in_fechaCreacion            IN DATE,
     in_kilogramos               IN NUMBER,
     in_precioKgCostoUnitario    IN NUMBER,
-    in_precioKgVentaUnitario    IN NUMBER
+    in_precioKgVentaUnitario    IN NUMBER,
 
     out_registros           OUT SYS_REFCURSOR
 )
