@@ -13,7 +13,7 @@ OUT_ID_SALIDA 	OUT NUMBER
 )AS 
 BEGIN
 
-INSERT INTO FERIA2.proceso_venta (
+INSERT INTO proceso_venta (
 ID,
 ingreso_id,
 solicitud_compra_id, 
@@ -40,6 +40,6 @@ RETURNING ID INTO OUT_ID_SALIDA;
     EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
   NULL;
 END SP_CREAR_PROCESO_VENTA;

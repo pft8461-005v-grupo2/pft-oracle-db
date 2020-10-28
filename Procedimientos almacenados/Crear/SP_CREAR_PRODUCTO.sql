@@ -13,7 +13,7 @@ BEGIN
     OUT_GLOSA := 'SP_CREAR_PRODUCTO ejecutado exitosamente';
     OUT_ESTADO := 0;
 
-   INSERT INTO feria2.producto(
+   INSERT INTO producto(
     ID,
     descripción,
     habilitado
@@ -29,5 +29,5 @@ BEGIN
     EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
 END SP_CREAR_PRODUCTO;

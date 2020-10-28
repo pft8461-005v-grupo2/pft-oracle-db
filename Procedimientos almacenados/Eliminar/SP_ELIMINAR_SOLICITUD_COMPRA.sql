@@ -5,11 +5,11 @@ OUT_ESTADO 		OUT NUMBER
 ) AS 
 BEGIN
 
-UPDATE FERIA2.solicitud_compra SET habilitado=0 WHERE id=in_id_solicitud_compra;
+UPDATE solicitud_compra SET habilitado=0 WHERE id=in_id_solicitud_compra;
 
  EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
   NULL;
 END SP_ELIMINAR_SOLICITUD_COMPRA;

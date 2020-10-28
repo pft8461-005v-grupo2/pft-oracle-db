@@ -11,7 +11,7 @@ OUT_ESTADO 	OUT NUMBER
 )AS 
 BEGIN
 
-UPDATE FERIA2.transportista 
+UPDATE transportista 
 SET 
 transportista.rut= IN_RUT,
 transportista.razonsocial=IN_RAZON_SOCIAL,
@@ -31,6 +31,6 @@ MERGE INTO usuario usu
 EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
   NULL;
 END SP_ACTUALIZAR_TRANSPORTISTA;

@@ -17,7 +17,7 @@ BEGIN
 OUT_GLOSA := 'SP_ACTUALIZAR_CLIENTE ejecutado exitosamente';
     OUT_ESTADO := 0;
 
-    UPDATE FERIA2.CLIENTE
+    UPDATE CLIENTE
     SET  
    cliente.identificador=IN_IDENTIFICADOR,
    cliente.razonsocial=IN_RAZON_SOCIAL,
@@ -41,7 +41,7 @@ OUT_GLOSA := 'SP_ACTUALIZAR_CLIENTE ejecutado exitosamente';
     EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
 
   NULL;
 END SP_ACTUALIZAR_CLIENTE;

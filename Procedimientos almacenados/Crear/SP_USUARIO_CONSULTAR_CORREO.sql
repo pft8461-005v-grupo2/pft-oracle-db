@@ -5,16 +5,6 @@ create or replace PROCEDURE SP_USUARIO_CONSULTAR_CORREO(
   OUT_RESULTADO 	OUT SYS_REFCURSOR
 ) AS
 
-/**************************************************************************************************************
-   NAME:       SP_CREAR_XXXXX
-   PURPOSE:
-
-   REVISIONS:
-   Ver        Date           Author                    Description
-   ---------  ----------     -------------------       ----------------------------------------------
-   1.0        xx/xx/xxxx     xxxx@xx.cl       	       1. procedimiento que crea un nuevo xxxx
-
-***************************************************************************************************************/
 
 BEGIN
 
@@ -34,5 +24,5 @@ BEGIN
     EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := PORTAFOLIO.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
 END SP_USUARIO_CONSULTAR_CORREO;

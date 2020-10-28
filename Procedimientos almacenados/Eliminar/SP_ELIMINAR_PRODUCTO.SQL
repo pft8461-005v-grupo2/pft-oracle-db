@@ -9,12 +9,12 @@ BEGIN
     OUT_GLOSA := 'SP_ELIMINAR_PRODUCTO ejecutado exitosamente';
     OUT_ESTADO := 0;
     
-    UPDATE FERIA2.producto SET habilitado=0 WHERE ID=IN_ID_PRODUCTO ;
+    UPDATE producto SET habilitado=0 WHERE ID=IN_ID_PRODUCTO ;
    
     EXCEPTION
         WHEN OTHERS THEN
             OUT_ESTADO := -1;
-            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+            OUT_GLOSA := FN_GET_GLOSA_ERROR;
 
   NULL;
 END SP_ELIMINAR_PRODUCTO;
