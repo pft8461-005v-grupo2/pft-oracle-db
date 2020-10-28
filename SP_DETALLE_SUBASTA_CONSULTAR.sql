@@ -9,8 +9,8 @@ create or replace PROCEDURE SP_DETALLE_SUBASTA_CONSULTAR
 )
 AS
 
-DECLARE
-    valorPropuesta_id int ;
+--DECLARE
+    --valorPropuesta_id int ;
 BEGIN
 
 	-- Validador de valores obligatorios
@@ -19,7 +19,8 @@ BEGIN
 
     select  transportista_id,
             subasta_id ,
-    		valorPropuesta_id
+    		--valorPropuesta_id
+            valorPropuesta
     FROM detalle_subasta
     where 	
     		-- Opcionales
