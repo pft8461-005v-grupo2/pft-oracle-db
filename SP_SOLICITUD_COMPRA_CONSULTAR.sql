@@ -3,7 +3,7 @@ create or replace PROCEDURE SP_SOLICITUD_COMPRA_CONSULTAR
     -- Opcionales
     in_id                       IN NUMBER,
     in_cliente_id               IN NUMBER,
-    in_fechaCreación            IN DATE,
+    in_fechaCreacion            IN DATE,
     in_habilitado               IN VARCHAR2,
 
     out_registros           OUT SYS_REFCURSOR
@@ -18,14 +18,14 @@ BEGIN
 
     select      in_id,
                 in_cliente_id,
-                in_fechaCreación,
+                in_fechaCreacion,
                 in_habilitado
     FROM solicitud_compra
     where 	
     		-- Opcionales
     		(in_id IS NULL OR id = in_id)
 			AND (in_cliente_id IS NULL OR cliente_id = in_cliente_id)
-			AND (in_fechaCreación IS NULL OR fechaCreación = in_fechaCreación)
+			AND (in_fechaCreacion IS NULL OR fechaCreacion = in_fechaCreacion)
 	        AND (in_habilitado IS NULL OR habilitado = in_habilitado)
 			   ;
 
