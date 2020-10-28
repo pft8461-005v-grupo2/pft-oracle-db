@@ -1,10 +1,10 @@
 create or replace PROCEDURE SP_STOCK_DISPONIBLE_CONSULTAR
 (
     -- Opcionales
-    in_id                    IN NUMBER,
-    in_fecha_termino         IN NUMBER,
-    in_precio_ganador        IN NUMBER,
-    in_habilitado            IN char,
+    in_id                       IN NUMBER,
+    in_producto_id              IN NUMBER,
+    in_kilogramos               IN NUMBER,
+    in_fechaUltimaModificacion  IN DATE,
 
     out_registros           OUT SYS_REFCURSOR
 )
@@ -16,17 +16,17 @@ BEGIN
     OPEN out_registros FOR
 
 
-    select      in_id                    ,
-                in_fecha_termino         ,
-                in_precio_ganador        ,
-                in_habilitado            
-    FROM subasta
+    select      in_id,
+                in_producto_id,
+                in_kilogramos,
+                in_fechaUltimaModificacion
+    FROM stock_disponible
     where 	
     		-- Opcionales
     		(in_id IS NULL OR id = in_id)
-			AND (in_fecha_termino IS NULL OR fechatermino = fechatermino)
-			AND (in_precio_ganador IS NULL OR precioganador = precioganador)
-			AND (in_habilitado IS NULL OR in_habilitado = habilitado)
+			AND (in_producto_id IS NULL OR producto_id = in_producto_id)
+			AND (in_kilogramos IS NULL OR kilogramos = in_kilogramos)
+			AND (in_fechaUltimaModificacion IS NULL OR FECHAULTIMAMODIFICACION = in_fechaUltimaModificacion)
     ;
 
 EXCEPTION
