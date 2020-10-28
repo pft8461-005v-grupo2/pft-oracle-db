@@ -12,20 +12,9 @@ DROP TABLE SOLICITUD_COMPRA cascade constraints;
 DROP TABLE CLIENTE cascade constraints;
 DROP TABLE DETALLE_SOLICITUD cascade constraints;
 DROP TABLE PRODUCTO cascade constraints;
-DROP TABLE INGRESO cascade constraints;
+DROP TABLE STOCK_DISPONIBLE cascade constraints;
 
 
-
--- Generado por Oracle SQL Developer Data Modeler 20.2.0.167.1538
---   en:        2020-10-28 18:24:55 CLST
---   sitio:      Oracle Database 11g
---   tipo:      Oracle Database 11g
-
-
-
--- predefined type, no DDL - MDSYS.SDO_GEOMETRY
-
--- predefined type, no DDL - XMLTYPE
 
 CREATE TABLE cliente (
     id             INTEGER NOT NULL,
@@ -170,14 +159,14 @@ CREATE TABLE usuario (
     id          INTEGER NOT NULL,
     rol_id      INTEGER NOT NULL,
     correo      VARCHAR2(150) NOT NULL,
-    contrasena  VARCHAR2(30) NOT NULL,
+    contrasena  VARCHAR2(60) NOT NULL,
     habilitado  CHAR(1) NOT NULL
 );
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id );
 
 ALTER TABLE detalle_solicitud
-    ADD CONSTRAINT det_sol_sol_compra_fk FOREIGN KEY ( solicitud_compra_id )
+    ADD CONSTRAINT det_sol_sol_cp_fk FOREIGN KEY ( solicitud_compra_id )
         REFERENCES solicitud_compra ( id );
 
 ALTER TABLE detalle_subasta
@@ -185,7 +174,7 @@ ALTER TABLE detalle_subasta
         REFERENCES subasta ( id );
 
 ALTER TABLE detalle_subasta
-    ADD CONSTRAINT det_subt_trans_fk FOREIGN KEY ( transportista_id )
+    ADD CONSTRAINT det_sbt_transp_fk FOREIGN KEY ( transportista_id )
         REFERENCES transportista ( id );
 
 ALTER TABLE ingreso
@@ -201,7 +190,7 @@ ALTER TABLE proceso_venta
         REFERENCES ingreso ( id );
 
 ALTER TABLE proceso_venta
-    ADD CONSTRAINT prcs_vnta_sol_compra_fk FOREIGN KEY ( solicitud_compra_id )
+    ADD CONSTRAINT prs_vnt_sol_cpr_fk FOREIGN KEY ( solicitud_compra_id )
         REFERENCES solicitud_compra ( id );
 
 ALTER TABLE proceso_venta
@@ -225,46 +214,3 @@ ALTER TABLE usuario
         REFERENCES rol ( id );
 
 
-
--- Informe de Resumen de Oracle SQL Developer Data Modeler: 
--- 
--- CREATE TABLE                            14
--- CREATE INDEX                             0
--- ALTER TABLE                             26
--- CREATE VIEW                              0
--- ALTER VIEW                               0
--- CREATE PACKAGE                           0
--- CREATE PACKAGE BODY                      0
--- CREATE PROCEDURE                         0
--- CREATE FUNCTION                          0
--- CREATE TRIGGER                           0
--- ALTER TRIGGER                            0
--- CREATE COLLECTION TYPE                   0
--- CREATE STRUCTURED TYPE                   0
--- CREATE STRUCTURED TYPE BODY              0
--- CREATE CLUSTER                           0
--- CREATE CONTEXT                           0
--- CREATE DATABASE                          0
--- CREATE DIMENSION                         0
--- CREATE DIRECTORY                         0
--- CREATE DISK GROUP                        0
--- CREATE ROLE                              0
--- CREATE ROLLBACK SEGMENT                  0
--- CREATE SEQUENCE                          0
--- CREATE MATERIALIZED VIEW                 0
--- CREATE MATERIALIZED VIEW LOG             0
--- CREATE SYNONYM                           0
--- CREATE TABLESPACE                        0
--- CREATE USER                              0
--- 
--- DROP TABLESPACE                          0
--- DROP DATABASE                            0
--- 
--- REDACTION POLICY                         0
--- 
--- ORDS DROP SCHEMA                         0
--- ORDS ENABLE SCHEMA                       0
--- ORDS ENABLE OBJECT                       0
--- 
--- ERRORS                                   3
--- WARNINGS                                 0
