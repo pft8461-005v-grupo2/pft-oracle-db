@@ -1,0 +1,36 @@
+create or replace PROCEDURE SP_ACTUALIZAR_TRANSPORTISTA (
+IN_ID_TRANSPORTISTA NUMBER,
+IN_RUT IN VARCHAR2,
+IN_RAZON_SOCIAL IN VARCHAR2,
+IN_DIRECCION VARCHAR2,
+IN_COMUNA VARCHAR2,
+IN_CORREO VARCHAR2,
+IN_HABILITADO NUMBER,
+OUT_GLOSA 	OUT VARCHAR2,
+OUT_ESTADO 	OUT NUMBER
+)AS 
+BEGIN
+
+UPDATE FERIA2.transportista 
+SET 
+transportista.rut= IN_RUT,
+transportista.razonsocial=IN_RAZON_SOCIAL,
+transportista.direccion=IN_DIRECCION,
+transportista.comuna=IN_COMUNA,
+transportista.correo=IN_CORREO,
+transportista.habilitado=IN_HABILITADO
+WHERE ID=IN_ID_TRANSPORTISTA;
+
+MERGE INTO usuario usu
+    USING ( SELECT * from transportista) TRA
+    ON (usu.id=TRA.usuario_id)
+    WHEN MATCHED THEN
+    UPDATE SET
+      usu.correo=TRA.correo;
+
+EXCEPTION
+        WHEN OTHERS THEN
+            OUT_ESTADO := -1;
+            OUT_GLOSA := feria2.FN_GET_GLOSA_ERROR;
+  NULL;
+END SP_ACTUALIZAR_TRANSPORTISTA;
