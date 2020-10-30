@@ -15,7 +15,7 @@ BEGIN
 
    INSERT INTO producto(
     ID,
-    descripción,
+    descripcion,
     habilitado
 
    )
