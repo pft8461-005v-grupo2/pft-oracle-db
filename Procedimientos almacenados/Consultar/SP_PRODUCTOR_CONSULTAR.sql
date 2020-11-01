@@ -12,7 +12,7 @@ create or replace PROCEDURE SP_PRODUCTOR_CONSULTAR
     in_habilitado         	IN VARCHAR2,
 
 
-    out_registros           OUT SYS_REFCURSOR
+    out_resultado           OUT SYS_REFCURSOR
 )
 AS
 
@@ -21,17 +21,17 @@ BEGIN
 	-- Validador de valores obligatorios
 
 
-    OPEN out_registros FOR
+    OPEN out_resultado FOR
 
-    select  in_id,
-    		in_usuario_id ,
-    		in_contrato_id,
-    		in_rut,
-    		in_razonsocial,
-    		in_direccion ,
-    		in_comuna,
-    		in_correo,
-    		in_habilitado
+    select  id,
+    		usuario_id ,
+    		contrato_id,
+    		rut,
+    		razonsocial,
+    		direccion ,
+    		comuna,
+    		correo,
+    		habilitado
     FROM productor
     where 	
     		-- Opcionales
@@ -48,10 +48,7 @@ BEGIN
 
 EXCEPTION
 
-    WHEN NO_DATA_FOUND THEN
-    	out_registros := null;
-
     WHEN OTHERS THEN
-		out_registros := null;
+		out_resultado := null;
 
 END SP_PRODUCTOR_CONSULTAR;

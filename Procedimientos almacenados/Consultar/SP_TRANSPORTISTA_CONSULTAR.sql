@@ -10,24 +10,21 @@ create or replace PROCEDURE SP_TRANSPORTISTA_CONSULTAR
     in_correo           IN VARCHAR2,
     in_habilitado       IN VARCHAR2,
 
-    out_registros           OUT SYS_REFCURSOR
+    out_resultado        OUT SYS_REFCURSOR
 )
 AS
 
 BEGIN
 
-	-- Validador de valores obligatorios
-    OPEN out_registros FOR
-
-
-    select      in_id,
-                in_usuario_id,
-                in_rut,
-                in_razonSocial,
-                in_direccion,
-                in_comuna,
-                in_correo,
-                in_habilitado
+    OPEN out_resultado FOR
+    select      id,
+                usuario_id,
+                rut,
+                razonSocial,
+                direccion,
+                comuna,
+                correo,
+                habilitado
     FROM transportista
     where 	
     		-- Opcionales
@@ -43,10 +40,7 @@ BEGIN
 
 EXCEPTION
 
-    WHEN NO_DATA_FOUND THEN
-    	out_registros := null;
-
     WHEN OTHERS THEN
-		out_registros := null;
+		out_resultado := null;
 
 END SP_TRANSPORTISTA_CONSULTAR;

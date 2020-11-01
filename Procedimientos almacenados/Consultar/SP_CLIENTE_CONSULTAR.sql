@@ -12,26 +12,23 @@ create or replace PROCEDURE SP_CLIENTE_CONSULTAR
     in_correo                   IN VARCHAR2,
     in_habilitado               IN VARCHAR2,
 
-    out_registros           OUT SYS_REFCURSOR
+    out_resultado           OUT SYS_REFCURSOR
 )
 AS
 
 BEGIN
 
-	-- Validador de valores obligatorios
-    OPEN out_registros FOR
-
-
-    select      in_id,
-                in_usuario_id,
-                in_identificador,
-                in_razonSocial,
-                in_direccion,
-                in_ciudad,
-                in_pais_origen,
-                in_tipo_cliente,
-                in_correo,
-                in_habilitado
+    OPEN out_resultado FOR
+    select      id,
+                usuario_id,
+                identificador,
+                razonSocial,
+                direccion,
+                ciudad,
+                pais_origen,
+                tipo_cliente,
+                correo,
+                habilitado
     FROM cliente
     where 	
     		-- Opcionales
@@ -49,10 +46,7 @@ BEGIN
 
 EXCEPTION
 
-    WHEN NO_DATA_FOUND THEN
-    	out_registros := null;
-
     WHEN OTHERS THEN
-		out_registros := null;
+		out_resultado := null;
 
 END SP_CLIENTE_CONSULTAR;
