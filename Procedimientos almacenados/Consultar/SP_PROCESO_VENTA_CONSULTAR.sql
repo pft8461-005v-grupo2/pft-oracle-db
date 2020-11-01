@@ -7,19 +7,19 @@ create or replace PROCEDURE SP_PROCESO_VENTA_CONSULTAR
     in_subasta_id           IN NUMBER,
     in_etapa                IN NUMBER,
     in_fechaCreacion        IN DATE,
-    in_clienteAceptaAcuerdo IN VARCHAR2,
+    in_clienteAceptaAcuerdo IN CHAR,
     in_precioVentaTotal     IN NUMBER,
     in_precioCostoTotal     IN NUMBER,
 
 
-    out_registros           OUT SYS_REFCURSOR
+    out_resultado           OUT SYS_REFCURSOR
 )
 AS
 
 BEGIN
 
     -- Validador de valores obligatorios
-    OPEN out_registros FOR
+    OPEN out_resultado FOR
 
 
     select      id,
