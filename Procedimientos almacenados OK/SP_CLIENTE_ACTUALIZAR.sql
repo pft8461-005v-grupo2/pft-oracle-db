@@ -57,6 +57,12 @@ BEGIN
         UPDATE SET
           usu.correo=CLI.correo where CLI.id=IN_ID_CLIENTE;
     --END IF;
+    MERGE INTO usuario usu
+        USING ( SELECT habilitado, id,usuario_id from CLIENTE) CLI
+        ON (usu.id=CLI.usuario_id)
+        WHEN MATCHED THEN
+        UPDATE SET
+          usu.habilitado=CLI.habilitado where CLI.id=IN_ID_CLIENTE;
 
     OUT_ID_SALIDA := IN_ID_CLIENTE;
 
