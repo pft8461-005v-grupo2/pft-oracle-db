@@ -49,14 +49,14 @@ BEGIN
     WHERE ID=IN_ID_CLIENTE ;
 
 
-    IF IN_CORREO != null THEN
+   -- IF IN_CORREO != null THEN
         MERGE INTO usuario usu
-        USING ( SELECT * from CLIENTE) CLI
+        USING ( SELECT correo, id,usuario_id from CLIENTE) CLI
         ON (usu.id=CLI.usuario_id)
         WHEN MATCHED THEN
         UPDATE SET
-          usu.correo=CLI.correo;
-    END IF;
+          usu.correo=CLI.correo where CLI.id=IN_ID_CLIENTE;
+    --END IF;
 
     OUT_ID_SALIDA := IN_ID_CLIENTE;
 
