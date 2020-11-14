@@ -59,7 +59,9 @@ BEGIN
         WHEN MATCHED THEN
         UPDATE SET
           usu.correo=pro.correo where pro.id=IN_ID_PRODUCTOR ;
-     --END IF;  
+     --END IF; 
+     
+     OUT_ID_SALIDA := IN_ID_PRODUCTOR;
 
     EXCEPTION
 
