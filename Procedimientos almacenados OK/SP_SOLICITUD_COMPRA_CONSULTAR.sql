@@ -5,7 +5,7 @@ create or replace PROCEDURE SP_SOLICITUD_COMPRA_CONSULTAR
     in_cliente_id               IN NUMBER,
     in_fechacreacion            IN DATE,
     in_producto                 IN VARCHAR2,
-    in_kilogramos               IN VARCHAR2,
+    in_kilogramos               IN NUMBER,
     in_habilitado               IN NUMBER,
 
     out_registros           OUT SYS_REFCURSOR
