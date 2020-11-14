@@ -1,7 +1,7 @@
 create or replace PROCEDURE SP_TRANSPORTISTA_ACTUALIZAR (
 
         IN_ID_TRANSPORTISTA     IN NUMBER,
-        --IN_USUARIO_ID           IN NUMBER,
+        IN_USUARIO_ID           IN NUMBER,
         IN_RUT                  IN VARCHAR2,
         IN_RAZON_SOCIAL         IN VARCHAR2,
         IN_DIRECCION            IN VARCHAR2,
