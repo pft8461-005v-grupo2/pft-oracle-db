@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PR_VENTA_SOLICITUD" directorySegmentName="seg_0" id="3891EB19-523C-8D11-005C-AAF5ADE9393B">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:44:56 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="5BF6709C-3E6C-3637-D2E6-79FAB4E534D3" value="true"/>
+</engineerTo>
+<sourcePk>CF25FC0E-90B4-9DD2-5A47-089A64426AA7</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DB5C362F-2355-ED4C-8E94-EC5690B9C5E3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>73DBD3A7-99F9-85D6-EF80-15952E7AE477</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

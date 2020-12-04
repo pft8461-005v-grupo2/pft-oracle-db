@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="39EEEF3A-B01C-A8F8-A98D-E9DB5252711C" containerWithKeyObject="DE07D924-E51D-1B43-A940-89F02CCAE5C5" localFKIndex="D49C4F12-E66D-8439-7F71-404C7A3DEA5A" name="DETALLE_SUBASTA_TRANSPORTISTA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>340755C4-8463-D23E-BECC-BDAA16C1A473</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<referredTableLongName>TRANSPORTISTA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1B5B57B0-FFB0-3018-5CB3-E750D7F2B77C</referredTableID>
+<keyObject>48FE4CDF-6912-F698-2317-8EE6364A4DC1</keyObject>
+<referredKeyID>48FE4CDF-6912-F698-2317-8EE6364A4DC1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

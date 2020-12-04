@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C44039C-1205-25B8-90F6-AD2453B1F55D" name="PRODUCTOR">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>3032D268-181D-4265-C1A3-99CA034F6CDD</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="DBF695A2-55EA-358D-1861-C02B1A52E252">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>33210D7F-E37D-ED67-FD1C-5C40B6309C7E</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario_id" id="752970E5-7A8A-8229-C1D5-9F626EAEC3BE">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>04271785-477E-B81E-BF3D-D99FF16553F1</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rut" id="CC247B6E-0FB3-4728-D79A-BB838C0DA56E">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>D2DD7F08-8C8E-E0AD-3458-65952D002B8B</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="razonsocial" id="18C84134-707D-EA5E-1967-97C23094B2AA">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>0A86BDDA-C1FE-CA4D-6F49-FC0B0A69A3FE</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="C2C35787-B6B3-E3F3-E1EA-B243D3F5397C">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>F5F5170C-005D-7816-AA40-1C6653C1477F</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comuna" id="7A4D4421-597A-E214-D54B-A5A82149175E">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>74947F65-2010-4DDF-3764-67CFAC2F7668</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="3EF8646C-E97A-CF24-DE41-02B83C0016FC">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>EE76135D-AB46-7C5F-A2AE-481FD7FBF125</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="habilitado" id="2AF8CC29-4009-E7FF-99F4-15D6B0B12760">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>EE05BBD2-56E6-880A-C22C-F29AA62E62A5</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C407019F-685C-44F1-20D9-739972DBC04B" name="PRODUCTOR_PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>23D0FEEE-1CAF-86D5-0CF2-3F53053EA21C</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBF695A2-55EA-358D-1861-C02B1A52E252"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

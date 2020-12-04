@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEA9D3E9-A72D-613D-312D-0FA4203DAE0D" name="ROL">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>63BC57F6-542F-AA4C-F865-383146F029A3</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CB00FBF8-7165-171D-A523-AE7E1C3333F5">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>2F9FC60C-D693-82C5-0333-9BA7688F5879</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="C5F57879-240F-A77F-FFD9-18F84E690B31">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>1717CF58-0DA1-9F0D-3962-53D0FB061C54</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="area" id="E4D96768-1522-E246-B5EA-F884690B190A">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>0A3D6C73-986E-7A0C-F534-A32A8B5077CB</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="83CDA163-2B87-F5B8-D1D1-0B2E2C7245F4" name="ROL_PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>076E3AF2-8D46-F03D-E60A-EE9ECBBA3753</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB00FBF8-7165-171D-A523-AE7E1C3333F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

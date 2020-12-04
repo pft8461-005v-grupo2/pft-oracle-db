@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2DB85039-6BBD-BD15-DFEA-26C08A7D5A4A" name="SOLICITUD_COMPRA">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>DB5C362F-2355-ED4C-8E94-EC5690B9C5E3</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="BCC74FE3-49F8-D326-A920-5B420C0C7A7D">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>8C564329-C575-EBE4-6D02-A357976FF641</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENTE_id" id="00E58B32-1BD0-CF44-5861-57FD0F9AE4C1">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>E3D65884-B00E-17C2-B59C-5CFDD92CCBAF</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4CCD4C5-106E-78B1-D4CB-17A5DE78304E" referredColumn="44B8E5F7-917C-9EB8-8D23-1446CA81DDFF"/>
+</associations>
+</Column>
+<Column name="fechacreacion" id="7D6010D6-3973-B1D7-C9BC-B7326850B543">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>FEE3909D-C6D3-3EAB-A4E8-41ADB6031DC6</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="habilitado" id="7BC8AD91-9304-5A7C-B6BD-94ADEE5A032E">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>FF866A6B-38CA-902B-A611-3CEA6228B40E</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B51201C3-6BA2-14FD-BDB2-86B3A0E8B9A0" name="SOLICITUD_COMPRA_PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>CF25FC0E-90B4-9DD2-5A47-089A64426AA7</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BCC74FE3-49F8-D326-A920-5B420C0C7A7D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0325BB5-E835-CD70-8C9C-D9947958FE02" name="SOLICITUD_COMPRA_CLIENTE_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-10-05 23:08:06 UTC</createdTime>
+<generatorID>1188F7BD-7EF8-B287-8BFE-6C91FDDAAF64</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00E58B32-1BD0-CF44-5861-57FD0F9AE4C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

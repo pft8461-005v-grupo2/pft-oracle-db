@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DETALLE_SUBASTA" directorySegmentName="seg_0" id="340755C4-8463-D23E-BECC-BDAA16C1A473">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:48:49 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>747A1E11-3FA0-68C8-B416-5B2D4F6F2678</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>16F94044-09D1-3500-3945-32FB02654371</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="valorpropuesta" id="A0FE1DA9-FD1D-C365-8B91-F868534FA447">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:53:15 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

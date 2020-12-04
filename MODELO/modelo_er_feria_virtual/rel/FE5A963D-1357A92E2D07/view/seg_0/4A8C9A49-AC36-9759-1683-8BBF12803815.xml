@@ -1,0 +1,381 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableView class="oracle.dbtools.crest.model.design.relational.TableView" directorySegmentName="seg_0" id="4A8C9A49-AC36-9759-1683-8BBF12803815" name="STOCK_DISPONIBLE">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>486EC8EB-45CA-B3CB-9A2F-45144AD6C40E</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<userDefined>true</userDefined>
+<userDefinedSQL><![CDATA[CREATE OR REPLACE VIEW STOCK_DISPONIBLE
+(
+    INGRESO_ID,
+    PRODUCTO_ID,
+    DESCRIPCION,
+    KILOGRAMOS,
+    PRECIOKGVENTAUNITARIO,
+    PRECIOKGCOSTOUNITARIO,
+    FECHACREACION_INGRESO,
+    PRODUCTOR_ID,
+    USUARIO_ID,
+    RUT_PRODUCTOR,
+    RAZONSOCIAL_PRODUCTOR,
+    DIRECCION_PRODUCTOR,
+    COMUNA_PRODUCTOR,
+    CORREO_PRODUCTOR,
+    CONTRATO_ID,
+    VIGENCIA_CONTRATO
+) AS
+
+SELECT
+    ingreso.id,
+    ingreso.producto_id,
+    producto.descripción,
+    ingreso.kilogramos,
+    ingreso.preciokgventaunitario,
+    ingreso.preciokgcostounitario,
+    ingreso.fechacreacion,
+    ingreso.productor_id,
+    productor.usuario_id,
+    productor.rut,
+    productor.razonsocial,
+    productor.direccion,
+    productor.comuna,
+    productor.correo,
+    contrato.id,
+    contrato.vigencia
+FROM
+         ingreso
+    INNER JOIN productor ON productor.id = ingreso.productor_id
+    INNER JOIN producto ON producto.id = ingreso.producto_id
+    INNER JOIN contrato ON productor.id = contrato.productor_id
+    
+WHERE ingreso.habilitado = 1 AND contrato.vigencia = 1 AND productor.habilitado = 1
+
+]]></userDefinedSQL>
+<layoutSQL><![CDATA[<?xml version = '1.0' encoding = 'UTF-8'?>
+<ActiveQueryBuilderLayout><SQL>Select INGRESO.id, INGRESO.productor_id, INGRESO.producto_id, INGRESO.fechacreacion, INGRESO.kilogramos, INGRESO.preciokgventaunitario, INGRESO.preciokgcostounitario, INGRESO.habilitado, PRODUCTOR.usuario_id, PRODUCTOR.rut, PRODUCTOR.razonsocial, PRODUCTOR.direccion, PRODUCTOR.comuna, PRODUCTOR.correo, PRODUCTOR.habilitado, PRODUCTO.descripción, CONTRATO.fechainicio, CONTRATO.id, CONTRATO.productor_id, CONTRATO.fechatermino, CONTRATO.fechacreacion, CONTRATO.vigencia From INGRESO Inner Join PRODUCTOR On PRODUCTOR.id = INGRESO.productor_id Inner Join PRODUCTO On PRODUCTO.id = INGRESO.producto_id Inner Join CONTRATO On PRODUCTOR.id = CONTRATO.productor_id</SQL><SubQueries><SubQuery SQL="Select INGRESO.id, INGRESO.productor_id, INGRESO.producto_id, INGRESO.fechacreacion, INGRESO.kilogramos, INGRESO.preciokgventaunitario, INGRESO.preciokgcostounitario, INGRESO.habilitado, PRODUCTOR.usuario_id, PRODUCTOR.rut, PRODUCTOR.razonsocial, PRODUCTOR.direccion, PRODUCTOR.comuna, PRODUCTOR.correo, PRODUCTOR.habilitado, PRODUCTO.descripción, CONTRATO.fechainicio, CONTRATO.id, CONTRATO.productor_id, CONTRATO.fechatermino, CONTRATO.fechacreacion, CONTRATO.vigencia From INGRESO Inner Join PRODUCTOR On PRODUCTOR.id = INGRESO.productor_id Inner Join PRODUCTO On PRODUCTO.id = INGRESO.producto_id Inner Join CONTRATO On PRODUCTOR.id = CONTRATO.productor_id"><UnionSubQuery><DataSource SQL="INGRESO" X="50" Y="20" Height="183" Width="140"/><DataSource SQL="PRODUCTOR" X="434" Y="28" Height="183" Width="140"/><DataSource SQL="PRODUCTO" X="264" Y="216" Height="98" Width="140"/><DataSource SQL="CONTRATO" X="743" Y="67" Height="149" Width="140"/></UnionSubQuery></SubQuery></SubQueries></ActiveQueryBuilderLayout>]]></layoutSQL>
+<parsed>true</parsed>
+<viewElements>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id" id="31268624-F025-B066-DBDA-E5C27394F1DA">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 23:28:15 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>id</headerAlias>
+<reference>false</reference>
+<referencedColumn>E77F079F-97C7-09BD-784A-FFC28C84BE0A</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="producto_id" id="EC173027-197D-20C3-4624-A1C32071D388">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>E64D6F77-8CF4-882E-7399-BE21B68F359D</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>producto_id</headerAlias>
+<reference>false</reference>
+<referencedColumn>5BDF2AF4-69E3-D043-9B85-95BEEFD9A1C8</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="descripción" id="EE217693-0D7E-9A81-3BCD-D8E2EDCD7AB8">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>36F76D61-8740-A55E-BCC4-92DE4ACDBD1F</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (50)</dataType>
+<headerAlias>descripción</headerAlias>
+<reference>false</reference>
+<referencedColumn>A741AB02-D988-9634-49E9-DDCE376D00E6</referencedColumn>
+<table>FEE5B9D4-0361-3F71-956F-43085B82ACAA</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="kilogramos" id="D52D2F3B-3CE5-AD5D-B168-3ED581A77A43">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>A01165AF-B7C1-7943-707F-6044D7D502C4</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>NUMBER</dataType>
+<headerAlias>kilogramos</headerAlias>
+<reference>false</reference>
+<referencedColumn>B8263E31-C588-8F4C-D378-43C9489FEA36</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="preciokgventaunitario" id="FF8122E5-4F53-8363-65A1-5F10D10817A9">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>E2E577A5-D982-3C4E-E969-8DD909E3BC93</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>preciokgventaunitario</headerAlias>
+<reference>false</reference>
+<referencedColumn>A5FB15BC-5BF9-75DF-1C5F-C7519B463B66</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="preciokgcostounitario" id="30BFE950-3749-92DA-3A1B-A2F1AC979156">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>157BA932-4FC2-A546-0FDA-9AED2006D41B</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>preciokgcostounitario</headerAlias>
+<reference>false</reference>
+<referencedColumn>E77225A4-C6FB-2A6E-D84E-ACCF0D8BAF30</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="fechacreacion" id="FF88A0A8-0F52-2A4D-24F6-16AC8FABD4E8">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>DC3C3CF7-7E26-06AF-8A1F-1417F72AE974</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>DATE</dataType>
+<headerAlias>fechacreacion</headerAlias>
+<reference>false</reference>
+<referencedColumn>4998450A-6D00-A352-0569-2DBD3EECF2D6</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="productor_id" id="BECFBD73-195A-C63D-C84C-8342047DB307">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>EB2DBAB2-6CF2-F113-8263-18E67251F242</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>productor_id</headerAlias>
+<reference>false</reference>
+<referencedColumn>58BD1C20-BDFC-143C-FAAC-5622FF3F6DDC</referencedColumn>
+<table>3A9A603B-67CA-6608-4BF5-9E60A5DA324F</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="usuario_id" id="56D9AF82-C547-EF84-706E-56DE8F755E21">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>FAE48BA0-CB28-71C1-A8BC-5BCC1EB49099</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>usuario_id</headerAlias>
+<reference>false</reference>
+<referencedColumn>752970E5-7A8A-8229-C1D5-9F626EAEC3BE</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="rut" id="B3029B22-9789-BB89-56DF-34ABC984084E">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>D3159270-E32C-E64E-BA88-C7436A92A589</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (10)</dataType>
+<headerAlias>rut</headerAlias>
+<reference>false</reference>
+<referencedColumn>CC247B6E-0FB3-4728-D79A-BB838C0DA56E</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="razonsocial" id="8E4DCCDE-74D0-B6E5-5398-9D2A192D330C">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>55E7E253-0D28-BDA4-E083-B6991308914E</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (150)</dataType>
+<headerAlias>razonsocial</headerAlias>
+<reference>false</reference>
+<referencedColumn>18C84134-707D-EA5E-1967-97C23094B2AA</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="direccion" id="3B2705FA-0AE7-16AC-4B52-2432B3C8B153">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>6589595E-DF74-1992-EA7C-4FE611B9FAC3</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (200)</dataType>
+<headerAlias>direccion</headerAlias>
+<reference>false</reference>
+<referencedColumn>C2C35787-B6B3-E3F3-E1EA-B243D3F5397C</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="comuna" id="7F95C4E5-EE20-9A75-ECEB-D5DC2C3E2C3A">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>CD83C6F8-7E6B-A1AB-016C-CAA78EB4C1DE</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (100)</dataType>
+<headerAlias>comuna</headerAlias>
+<reference>false</reference>
+<referencedColumn>7A4D4421-597A-E214-D54B-A5A82149175E</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="correo" id="D53E9762-D189-D037-8F6E-A25802E67C5B">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>9FAF20DB-7E3B-4559-9AE4-BBA4749BF41A</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>VARCHAR2 (150)</dataType>
+<headerAlias>correo</headerAlias>
+<reference>false</reference>
+<referencedColumn>3EF8646C-E97A-CF24-DE41-02B83C0016FC</referencedColumn>
+<table>4C44039C-1205-25B8-90F6-AD2453B1F55D</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="id_1" id="8EB3E762-AF94-951F-817F-D9657BC02D75">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 23:28:15 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>INTEGER</dataType>
+<headerAlias>id_1</headerAlias>
+<reference>false</reference>
+<referencedColumn>E70BAEC2-BE16-9EE3-2F7C-0DEA1C8975BB</referencedColumn>
+<table>D7A51414-46C0-C114-A446-E2CF510039B9</table>
+</viewElement>
+<viewElement class="oracle.dbtools.crest.model.design.relational.ColumnView" name="vigencia" id="FA507BE3-0426-160C-2733-A193AEA4550B">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>0F398665-57F9-8BA9-D7EF-14702BFE99F2</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<dataType>SMALLINT</dataType>
+<headerAlias>vigencia</headerAlias>
+<reference>false</reference>
+<referencedColumn>FCA746C6-5875-8F39-838E-BB5747915BEE</referencedColumn>
+<table>D7A51414-46C0-C114-A446-E2CF510039B9</table>
+<viewID>4A8C9A49-AC36-9759-1683-8BBF12803815</viewID>
+</viewElement>
+</viewElements>
+<usedObjects>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3A9A603B-67CA-6608-4BF5-9E60A5DA324F">
+<container>true</container>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4C44039C-1205-25B8-90F6-AD2453B1F55D">
+<container>true</container>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FEE5B9D4-0361-3F71-956F-43085B82ACAA">
+<container>true</container>
+<tableName>PRODUCTO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="D7A51414-46C0-C114-A446-E2CF510039B9">
+<container>true</container>
+<tableName>CONTRATO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E77F079F-97C7-09BD-784A-FFC28C84BE0A">
+<columnName>id</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="5BDF2AF4-69E3-D043-9B85-95BEEFD9A1C8">
+<columnName>PRODUCTO_id</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A741AB02-D988-9634-49E9-DDCE376D00E6">
+<columnName>descripción</columnName>
+<tableName>PRODUCTO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="B8263E31-C588-8F4C-D378-43C9489FEA36">
+<columnName>kilogramos</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="A5FB15BC-5BF9-75DF-1C5F-C7519B463B66">
+<columnName>preciokgventaunitario</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E77225A4-C6FB-2A6E-D84E-ACCF0D8BAF30">
+<columnName>preciokgcostounitario</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="4998450A-6D00-A352-0569-2DBD3EECF2D6">
+<columnName>fechacreacion</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="58BD1C20-BDFC-143C-FAAC-5622FF3F6DDC">
+<columnName>PRODUCTOR_id</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="752970E5-7A8A-8229-C1D5-9F626EAEC3BE">
+<columnName>usuario_id</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CC247B6E-0FB3-4728-D79A-BB838C0DA56E">
+<columnName>rut</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="18C84134-707D-EA5E-1967-97C23094B2AA">
+<columnName>razonsocial</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="C2C35787-B6B3-E3F3-E1EA-B243D3F5397C">
+<columnName>direccion</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="7A4D4421-597A-E214-D54B-A5A82149175E">
+<columnName>comuna</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="3EF8646C-E97A-CF24-DE41-02B83C0016FC">
+<columnName>correo</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="E70BAEC2-BE16-9EE3-2F7C-0DEA1C8975BB">
+<columnName>id</columnName>
+<tableName>CONTRATO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="FCA746C6-5875-8F39-838E-BB5747915BEE">
+<columnName>vigencia</columnName>
+<tableName>CONTRATO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="979656BE-CBC5-90D3-2144-340F06C4D29B">
+<columnName>id</columnName>
+<tableName>PRODUCTO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="2AF8CC29-4009-E7FF-99F4-15D6B0B12760">
+<columnName>habilitado</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="DBF695A2-55EA-358D-1861-C02B1A52E252">
+<columnName>id</columnName>
+<tableName>PRODUCTOR</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="CFC29F46-E081-4E4E-5558-A612A5A5D11B">
+<columnName>habilitado</columnName>
+<tableName>INGRESO</tableName>
+</UsedObject>
+<UsedObject class="oracle.dbtools.crest.swingui.editor.viewbuilder.SQLNameHelper" id="F087430D-0050-E04B-2716-D14B0B14B339">
+<columnName>PRODUCTOR_id</columnName>
+<tableName>CONTRATO</tableName>
+</UsedObject>
+</usedObjects>
+</TableView>

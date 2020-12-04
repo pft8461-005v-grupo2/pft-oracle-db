@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PR_VENTA_SUBASTA" directorySegmentName="seg_0" id="848B6163-9A0F-5684-3385-B0777BD695E6">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:49:36 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="5BF6709C-3E6C-3637-D2E6-79FAB4E534D3" value="true"/>
+</engineerTo>
+<sourcePk>7AFF2D5F-6D07-EB9F-6C22-0997B84F6B33</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>16F94044-09D1-3500-3945-32FB02654371</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>73DBD3A7-99F9-85D6-EF80-15952E7AE477</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

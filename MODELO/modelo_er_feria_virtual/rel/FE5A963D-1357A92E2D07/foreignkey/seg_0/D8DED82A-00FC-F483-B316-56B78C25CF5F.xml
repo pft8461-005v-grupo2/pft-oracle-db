@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D8DED82A-00FC-F483-B316-56B78C25CF5F" containerWithKeyObject="3A9A603B-67CA-6608-4BF5-9E60A5DA324F" localFKIndex="33E7106B-10AD-C90F-999E-454F4353BE4C" name="INGRESO_PRODUCTOR_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<comment><![CDATA[PRODUCTOR -> DETALLE_INGRESO]]></comment>
+<generatorID>414CC1DA-BDB3-0485-EAC2-F0D711A71855</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<referredTableLongName>PRODUCTOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4C44039C-1205-25B8-90F6-AD2453B1F55D</referredTableID>
+<keyObject>C407019F-685C-44F1-20D9-739972DBC04B</keyObject>
+<referredKeyID>C407019F-685C-44F1-20D9-739972DBC04B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

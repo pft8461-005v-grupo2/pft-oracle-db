@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CEE70612-07C6-EE93-0C59-54D27C96A0B3" name="PROCESO_VENTA">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>73DBD3A7-99F9-85D6-EF80-15952E7AE477</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1B6C7ECF-73B2-F30B-3230-5218954E5240">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>F0863824-82D6-686C-8937-D0F77222EFB4</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SOLICITUD_COMPRA_id" id="F7146865-11EF-B80E-83BE-DFEE85ABB556">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>53ECCCF9-A428-1FBD-4B9C-AE8729407E49</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08FAD6F2-D88A-5D60-7B0E-9C616567EA84" referredColumn="4EC1C29F-15DF-896B-8E2F-A1B6C2ECD606"/>
+</associations>
+</Column>
+<Column name="SUBASTA_id" id="ED34BA07-6958-75B8-56C2-116EFF58409E">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>78901182-86AE-D2D1-D5B3-4E5DC9AF4EE9</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5A03B37-CBE8-4DF1-6787-9049D8F13EDE" referredColumn="FC77AE1B-4DF6-9531-E795-78C0A1722274"/>
+</associations>
+</Column>
+<Column name="etapa" id="818CC6F3-F180-0473-7108-B1D27AC4D29B">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>89B8DBF1-F602-FCF4-B7DD-BCA4736E6D60</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechacreacion" id="452FEEC0-2836-D40E-59D5-E4BCC27A4266">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>3E05577E-0764-86F1-97BC-3FB9CB33B8A5</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="clienteaceptaacuerdo" id="C592A28B-4148-DA07-5571-C76EE6493628">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>6DDF387C-8DF5-0C52-606B-E2BA409E13E6</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precioventatotal" id="E1E7A7A8-1DC4-6DEB-528A-A74C63580328">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>3FF234E1-6C65-17A1-8F25-0B9414CA3A51</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="preciocostototal" id="6B2D7CB6-80D0-A43E-F776-EA81C40FC746">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>67FF13F5-A770-88FE-ACE7-BA350F95D698</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07FE647C-596D-FCE9-DEE1-37A5922EA6EF" name="PROCESO_VENTA_PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>439EAB79-E438-BC4F-2B6D-636537C59B04</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1B6C7ECF-73B2-F30B-3230-5218954E5240"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9990F2F-341A-B38B-6999-627D90AC21E9" name="PROCESO_VENTA_SOLICITUD_COMPRA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>3891EB19-523C-8D11-005C-AAF5ADE9393B</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F7146865-11EF-B80E-83BE-DFEE85ABB556"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F35FC130-2442-7530-ED7E-D50FBA1C07EE" name="PROCESO_VENTA_SUBASTA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>848B6163-9A0F-5684-3385-B0777BD695E6</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED34BA07-6958-75B8-56C2-116EFF58409E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

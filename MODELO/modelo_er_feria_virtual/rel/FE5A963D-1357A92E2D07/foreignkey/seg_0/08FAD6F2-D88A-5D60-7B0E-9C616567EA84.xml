@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="08FAD6F2-D88A-5D60-7B0E-9C616567EA84" containerWithKeyObject="CEE70612-07C6-EE93-0C59-54D27C96A0B3" localFKIndex="E9990F2F-341A-B38B-6999-627D90AC21E9" name="PROCESO_VENTA_SOLICITUD_COMPRA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>3891EB19-523C-8D11-005C-AAF5ADE9393B</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<referredTableLongName>SOLICITUD_COMPRA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D1215C91-DD6D-8379-FE0E-B97DD457AC98</referredTableID>
+<keyObject>9062D28D-B052-8B81-288C-5EBE71DA09AB</keyObject>
+<referredKeyID>9062D28D-B052-8B81-288C-5EBE71DA09AB</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

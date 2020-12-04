@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="16F94044-09D1-3500-3945-32FB02654371" name="SUBASTA">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:47:11 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1D7399E9-0A73-5DDB-06D3-993C9173706A">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:47:22 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechatermino" id="6A5F7749-1E66-297D-A68D-F511D2D69E4F">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:51:50 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precioganador" id="B94CB894-D930-0602-6E4A-1189A3BEF924">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 22:10:18 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="habilitado" id="CB718BAF-C208-6BCE-7767-8B217034B886">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:52:01 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7AFF2D5F-6D07-EB9F-6C22-0997B84F6B33" name="SUBASTA PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:47:33 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1D7399E9-0A73-5DDB-06D3-993C9173706A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DET_PEDIDO" directorySegmentName="seg_0" id="1188F7BD-7EF8-B287-8BFE-6C91FDDAAF64">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 20:22:23 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="5BF6709C-3E6C-3637-D2E6-79FAB4E534D3" value="true"/>
+</engineerTo>
+<sourcePk>A0A1CBC5-8A8E-4FC6-FB62-80BDDB9AFDD5</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3E1FBB98-6389-0ECA-AF89-451DB3C1A642</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DB5C362F-2355-ED4C-8E94-EC5690B9C5E3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

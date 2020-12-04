@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PROCESO_VENTA_INGRESO" directorySegmentName="seg_0" id="616E2D09-1888-A36A-B849-46E32512CFAF">
+<createdBy>yan</createdBy>
+<createdTime>2020-11-13 03:04:12 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>7672F495-73F1-3E4B-EDBA-C51C3B1B3754</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>73DBD3A7-99F9-85D6-EF80-15952E7AE477</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

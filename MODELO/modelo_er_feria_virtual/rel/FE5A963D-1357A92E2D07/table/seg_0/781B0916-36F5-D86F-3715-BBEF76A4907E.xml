@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="781B0916-36F5-D86F-3715-BBEF76A4907E" name="DETALLE_SUBASTA">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TRANSPORTISTA_id" id="5DEA63E8-65B8-76E4-6B9F-3E5B7744079A">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1D241044-777C-1E80-A31C-C2F527133C9E" referredColumn="0CE57761-1956-4EEC-6754-30456CDDB2FE"/>
+</associations>
+</Column>
+<Column name="SUBASTA_id" id="55B4B7C4-5371-0341-3581-906115C34592">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DAD1AEB4-E9E9-B3EF-3007-C6473D8BCA1C" referredColumn="FC77AE1B-4DF6-9531-E795-78C0A1722274"/>
+</associations>
+</Column>
+<Column name="valorpropuesta" id="5E4DE3D4-63B9-EB3A-15BF-D25D64EEDE2C">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>A0FE1DA9-FD1D-C365-8B91-F868534FA447</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BEF6C07-5920-DED5-ED42-4021EA0EC0F2" name="DETALLE_SUBASTA_PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DEA63E8-65B8-76E4-6B9F-3E5B7744079A"/>
+<colUsage columnID="55B4B7C4-5371-0341-3581-906115C34592"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A65C5F8-B390-170B-68B4-042B9DA39065" name="DETALLE_SUBASTA_TRANSPORTISTA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>340755C4-8463-D23E-BECC-BDAA16C1A473</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DEA63E8-65B8-76E4-6B9F-3E5B7744079A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7DB3F1E-92F1-D42D-90A5-D12810A1D409" name="DETALLE_SUBASTA_SUBASTA_FK">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 22:49:38 UTC</createdTime>
+<generatorID>340755C4-8463-D23E-BECC-BDAA16C1A473</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55B4B7C4-5371-0341-3581-906115C34592"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

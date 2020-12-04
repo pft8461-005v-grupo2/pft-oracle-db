@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="productor_contrato" directorySegmentName="seg_0" id="0F10769E-84E1-AEDB-DEEE-25DEA133B25B">
+<createdBy>yan</createdBy>
+<createdTime>2020-11-05 04:31:21 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="DD70C41C-6E3F-6225-0B43-D044A37E970A" value="true"/>
+</engineerTo>
+<sourcePk>23D0FEEE-1CAF-86D5-0CF2-3F53053EA21C</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3032D268-181D-4265-C1A3-99CA034F6CDD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D068BECA-BB49-A4EC-8D3C-71DA1DDE003D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

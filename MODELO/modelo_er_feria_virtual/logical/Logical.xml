@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="611BA3DE-7532-F2CD-D614-17902B338844" mainViewID="6AD3F530-D418-65BD-CA1C-BA1452891547">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 20:16:14 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

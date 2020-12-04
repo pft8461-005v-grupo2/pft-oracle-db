@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="USUARIO_ROL" directorySegmentName="seg_0" id="7BC9231A-131D-5C82-E6C2-DFEE81D7A710">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 20:57:40 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="5BF6709C-3E6C-3637-D2E6-79FAB4E534D3" value="true"/>
+</engineerTo>
+<sourcePk>076E3AF2-8D46-F03D-E60A-EE9ECBBA3753</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>63BC57F6-542F-AA4C-F865-383146F029A3</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3D5D1947-1561-DA41-0222-E505079AC2C2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

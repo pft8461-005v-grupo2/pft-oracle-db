@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7672F495-73F1-3E4B-EDBA-C51C3B1B3754" name="INGRESO">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 20:33:16 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="2663CF77-4DF8-6AE8-015F-1047B083CA27">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:00:15 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="productor_id" id="4FC682E3-C0AA-9987-E041-FA132FE1FFFD">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:09:24 UTC</createdTime>
+<generatorID>414CC1DA-BDB3-0485-EAC2-F0D711A71855</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<referedAttribute>33210D7F-E37D-ED67-FD1C-5C40B6309C7E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="producto_id" id="C58CA467-3142-A80A-1E55-FDC688B4FD4C">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:09:49 UTC</createdTime>
+<generatorID>8DFED420-687E-2B24-F4F5-2BE13A251212</generatorID>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<referedAttribute>B153430C-5BA6-B142-02F0-9EC0D6F41243</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechacreacion" id="3BE9FB8D-DB21-3BC3-D586-E00BD34EA185">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 22:07:33 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kilogramos" id="7349C5CC-DE30-717D-C165-3CCFA315C242">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:17:13 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,6,3</ownDataTypeParameters>
+</Attribute>
+<Attribute name="preciokgcostounitario" id="5E7D95F3-BA3A-04CF-C160-392D216ADA23">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:54:15 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="preciokgventaunitario" id="15B830F5-AD6B-688F-8031-962D0A289F86">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 22:03:00 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="habilitado" id="C35A947D-5FA5-1CFE-529F-53A2133E4C77">
+<createdBy>yan</createdBy>
+<createdTime>2020-12-04 00:03:22 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT018</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7C8340A2-81E7-022A-F18F-49860BFC6AE9" name="PROCESO_VENTA PK">
+<createdBy>yan</createdBy>
+<createdTime>2020-09-19 21:00:21 UTC</createdTime>
+<ownerDesignName>modelo_er_feria_virtual</ownerDesignName>
+<engineerTo>
+<item key="C9F16836-6B5B-97BE-0998-D00E01DEE6B1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2663CF77-4DF8-6AE8-015F-1047B083CA27</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
