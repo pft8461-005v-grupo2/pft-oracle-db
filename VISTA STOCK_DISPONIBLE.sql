@@ -21,7 +21,7 @@ CREATE OR REPLACE VIEW STOCK_DISPONIBLE
 SELECT
     ingreso.id as ingreso_id,
     ingreso.producto_id,
-    producto.descripción,
+    producto.descripcion,
     ingreso.kilogramos,
     ingreso.preciokgventaunitario,
     ingreso.preciokgcostounitario,
