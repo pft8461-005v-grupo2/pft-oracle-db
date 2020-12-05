@@ -1,11 +1,11 @@
 create or replace PROCEDURE SP_PRODUCTO_CREAR (
   
   
-    IN_DESCRIPCION    IN VARCHAR2,
+  	IN_DESCRIPCION		IN VARCHAR2,
 
-    OUT_GLOSA     OUT VARCHAR2,
-    OUT_ESTADO    OUT NUMBER,
-  OUT_ID_SALIDA   OUT NUMBER
+  	OUT_GLOSA 		OUT VARCHAR2,
+  	OUT_ESTADO 		OUT NUMBER,
+	OUT_ID_SALIDA 	OUT NUMBER
 
 
 ) AS
@@ -42,7 +42,7 @@ BEGIN
     RETURNING ID INTO OUT_ID_SALIDA;
 
     EXCEPTION
-    WHEN EX_ExisteProducto THEN
+		WHEN EX_ExisteProducto THEN
             OUT_GLOSA := 'SP_PRODUCTO_CREAR ya se encuentra registrado el producto';
             OUT_ESTADO := -1;
             OUT_ID_SALIDA := -1;

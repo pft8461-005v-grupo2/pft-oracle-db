@@ -84,7 +84,7 @@ ALTER TABLE proceso_venta_ingreso ADD CONSTRAINT proceso_venta_ingreso_pk PRIMAR
 
 CREATE TABLE producto (
     id           INTEGER NOT NULL,
-    descripción  VARCHAR2(50) NOT NULL,
+    descripcion  VARCHAR2(50) NOT NULL,
     habilitado   SMALLINT NOT NULL
 );
 
