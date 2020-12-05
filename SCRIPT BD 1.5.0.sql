@@ -202,36 +202,7 @@ ALTER TABLE usuario
     ADD CONSTRAINT usuario_rol_fk FOREIGN KEY ( rol_id )
         REFERENCES rol ( id );
 
-CREATE OR REPLACE VIEW STOCK_DISPONIBLE ( id, productor_id, producto_id, fechacreacion, kilogramos, preciokgventaunitario, preciokgcostounitario, habilitado, usuario_id, rut, razonsocial, direccion, comuna, correo, habilitado_1, descripción, fechainicio, id_1, productor_id_1, fechatermino, fechacreacion_1, vigencia ) AS
-SELECT
-    ingreso.id,
-    ingreso.productor_id,
-    ingreso.producto_id,
-    ingreso.fechacreacion,
-    ingreso.kilogramos,
-    ingreso.preciokgventaunitario,
-    ingreso.preciokgcostounitario,
-    ingreso.habilitado,
-    productor.usuario_id,
-    productor.rut,
-    productor.razonsocial,
-    productor.direccion,
-    productor.comuna,
-    productor.correo,
-    productor.habilitado,
-    producto.descripción,
-    contrato.fechainicio,
-    contrato.id,
-    contrato.productor_id,
-    contrato.fechatermino,
-    contrato.fechacreacion,
-    contrato.vigencia
-FROM
-         ingreso
-    INNER JOIN productor ON productor.id = ingreso.productor_id
-    INNER JOIN producto ON producto.id = ingreso.producto_id
-    INNER JOIN contrato ON productor.id = contrato.productor_id 
-;
+
 
 
 
